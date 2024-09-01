@@ -34,6 +34,7 @@
     "@stripe/react-stripe-js": "^1.15.0",
     "@stripe/stripe-js": "^1.44.1",
     "@tailwindcss/forms": "^0.5.3",
+    "@vendure/email-plugin": "^3.0.1",
     "braintree-web-drop-in": "^1.33.7",
     "clsx": "^1.2.1",
     "cross-env": "^7.0.3",

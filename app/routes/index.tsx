@@ -15,7 +15,7 @@ export async function loader({ request }: LoaderArgs) {
 export default function Index() {
   const { collections } = useLoaderData<typeof loader>();
   const { t } = useTranslation();
-  const headerImage = collections[0]?.featuredAsset?.preview;
+  const headerImage = "https://kosataga.in/cdn/shop/files/2_5098f428-9d39-43ff-a473-3912556e4f46_1440x640.jpg";//collections[0]?.featuredAsset?.preview;
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function Index() {
               alt="header"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-br from-zinc-400 to-black mix-blend-darken" />
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-400 to-black " style={{ mixBlendMode: "color-dodge" }} />
         </div>
         <div
           aria-hidden="true"
@@ -37,14 +37,14 @@ export default function Index() {
         />
         <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
           <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
-            <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl bg-gradient-to-r from-yellow-600 via-red-500 to-blue-600">
+            <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl " style={{ color: "#fff" }}>
               {t('vendure.title')}
             </h1>
           </div>
 
           <p className="mt-4 text-2xl text-white">
             {t('vendure.intro')}{' '}
-            <a
+            {/* <a
               href="https://www.vendure.io"
               className="text-blue-300 hover:text-blue-500"
             >
@@ -56,9 +56,9 @@ export default function Index() {
               className="text-red-300 hover:text-red-500"
             >
               Remix
-            </a>
+            </a> */}
           </p>
-          <p className="mt-4 text-gray-300 space-x-1">
+          {/* <p className="mt-4 text-gray-300 space-x-1">
             <BookOpenIcon className="w-5 h-5 inline" />
             <span>{t('common.readMore')}</span>
             <a
@@ -67,7 +67,7 @@ export default function Index() {
             >
               {t('vendure.link')}
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
 

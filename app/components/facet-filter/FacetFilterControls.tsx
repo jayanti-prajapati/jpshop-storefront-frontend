@@ -166,9 +166,11 @@ export default function FacetFilterControls({
                     </span>
                   </Disclosure.Button>
                 </h3>
+                {/* {console.log(facet)} */}
                 <Disclosure.Panel className="pt-6">
                   <div className="space-y-4">
                     {facet.values.map((value, optionIdx) => (
+
                       <div key={value.id} className="flex items-center">
                         <input
                           id={`filter-${facet.id}-${optionIdx}`}
@@ -176,14 +178,15 @@ export default function FacetFilterControls({
                           defaultValue={value.id}
                           type="checkbox"
                           checked={value.selected}
-                          onChange={() => {}}
+                          onChange={() => { }}
                           className="h-4 w-4 border-gray-300 rounded text-primary-600 focus:ring-primary-500"
                         />
                         <label
                           htmlFor={`filter-${facet.id}-${optionIdx}`}
                           className="ml-3 text-sm text-gray-600"
                         >
-                          {value.name}
+                          {value?.name}
+
                         </label>
                       </div>
                     ))}
